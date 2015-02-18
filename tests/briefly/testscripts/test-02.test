@@ -1,0 +1,19 @@
+#> Single thread with multiple targets.
+
+from briefly import *
+from testutils import *
+
+objs = Pipeline("test-02")
+objs.prop.run_threads = 1
+
+def get_target(n):
+  current = objs.phony()
+  for i in range(10):
+    current = current | test(i + n)
+  return current
+
+t1 = get_target(100)
+t2 = get_target(200)
+t3 = get_target(300)
+
+objs.run(t1, t2, t3)

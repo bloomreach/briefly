@@ -1,0 +1,21 @@
+#> Automatic error retry logic.
+
+from briefly import *
+from testutils import *
+
+objs = Pipeline("test-04")
+
+objs.prop.run_threads = 5
+objs.prop.num_retry = 10
+counter = 0
+
+@simple_process
+def test_error(self, tid):
+  global counter
+  counter += 1
+  if counter < objs.prop.num_retry:
+    test_log('%d (#%d)', tid, counter)
+    raise Exception('dummy')
+  test_log('%d', tid)
+
+objs.run(objs | test_error(0))

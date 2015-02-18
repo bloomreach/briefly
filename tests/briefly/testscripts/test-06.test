@@ -1,0 +1,35 @@
+#> Branch/combine execution.
+
+from briefly import *
+from testutils import *
+
+objs = Pipeline("test-06")
+counter = 0
+
+c = []
+for n in range(5):
+  if n == 0:
+    c = [objs.phony()]
+    continue
+
+  nc = []
+  for i in range(n + 1):
+    counter += 1
+    deps = []
+    if i < n:
+      deps.append(c[i])
+    if i > 0:
+      deps.append(c[i-1])
+    nc.append(objs | test(counter, *deps))
+  c = nc
+
+for n in range(len(c) - 1, 0, -1):
+  nc = []
+  for i in range(n):
+    counter += 1
+    node = objs | test(counter, c[i], c[i+1])
+    nc.append(node)
+  c = nc
+
+print len(c)
+objs.run(*c)

@@ -1,0 +1,12 @@
+#> Basic sequencial execution.
+
+from briefly import *
+from testutils import *
+
+objs = Pipeline("test-01")
+
+current = objs.phony()
+for i in range(10):
+  current = current | test(i)
+
+objs.run(current)
