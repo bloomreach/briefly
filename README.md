@@ -846,7 +846,7 @@ Contributors
 More Information
 ----------------
 
-   Bloomreach Engineering Blog: (http://engineering.bloomreach.com/introducing-briefly-a-python-meta-programming-library-to-scale-complex-mapreduce-pipelines)[http://engineering.bloomreach.com/introducing-briefly-a-python-meta-programming-library-to-scale-complex-mapreduce-pipelines]
+   Bloomreach Engineering Blog: [http://engineering.bloomreach.com/introducing-briefly-a-python-meta-programming-library-to-scale-complex-mapreduce-pipelines](http://engineering.bloomreach.com/introducing-briefly-a-python-meta-programming-library-to-scale-complex-mapreduce-pipelines)
 
 License
 -------
