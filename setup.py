@@ -39,5 +39,5 @@ setup(name='briefly',
       packages=['briefly'],
       package_dir={'briefly': 'src/briefly'},
       install_requires=['boto>=2.3.0', 's4cmd>=1.5.20', 'qds_sdk==1.4.0'],
-      dependency_links=['git+https://github.com/qubole/qds-sdk-py.git@1.4.0#egg=qds_sdk-1.4.0']
+      dependency_links=['git+https://github.com/qubole/qds-sdk-py.git@v1.4.0#egg=qds_sdk-1.4.0']
      )
