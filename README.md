@@ -1,5 +1,7 @@
 Briefly Job Flow Control
 ========================
+
+[![Join the chat at https://gitter.im/bloomreach/briefly](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bloomreach/briefly?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Chou-han Yang (chyang@bloomreach.com)
 (Version 1.0)
 
